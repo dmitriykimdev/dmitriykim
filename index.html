@@ -4,45 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dmitriy Kim - Personal Business Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      background: #F8F9FA;
+      color: #2D2D2D;
     }
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #333;
-      padding: 1rem;
-      color: white;
+      background: #FFFFFF;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
     .navbar a {
-      color: white;
+      color: #2D2D2D;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .navbar a:hover {
+      color: #007BFF;
+    }
+    .site-name {
+      font-size: 1.5rem;
+      font-weight: 600;
     }
     .search-container {
       position: relative;
-      display: inline-block;
     }
     #search-input {
-      padding: 10px;
-      padding-right: 40px; /* Space for the icon */
-      width: 200px; /* Adjust as needed */
-    }
-    #search-button {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
+      padding: 0.5rem 1rem;
+      background: #F1F3F5;
       border: none;
-      cursor: pointer;
+      border-radius: 4px;
+      width: 200px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s ease;
     }
-    .search-icon {
-      font-size: 20px;
+    #search-input:focus {
+      outline: none;
+      background: #E9ECEF;
+    }
+    #search-input::placeholder {
+      color: #6B7280;
     }
     .modal {
       display: none;
@@ -57,62 +68,86 @@
       z-index: 1000;
     }
     .modal-content {
-      background: white;
+      background: #FFFFFF;
       padding: 2rem;
-      border-radius: 5px;
-      position: relative;
       width: 80%;
       max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .modal-content .close {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 1rem;
+      right: 1.5rem;
       font-size: 1.5rem;
       cursor: pointer;
+      color: #6B7280;
     }
     .modal-content form {
       display: flex;
       flex-direction: column;
     }
     .modal-content label {
-      margin: 0.5rem 0;
+      margin: 0.5rem 0 0.25rem;
+      font-weight: 500;
     }
     .modal-content input,
     .modal-content textarea {
-      padding: 0.5rem;
+      padding: 0.75rem;
       margin-bottom: 1rem;
+      border: 1px solid #E9ECEF;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
     }
     .modal-content button {
-      padding: 0.5rem;
-      margin: 0.5rem;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: none;
+      background: #007BFF;
+      color: white;
+      font-weight: 500;
       cursor: pointer;
+      border-radius: 4px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .modal-content button:hover {
+      background: #0056b3;
+      transform: scale(1.02);
+    }
+    .modal-content button#cancel {
+      background: #6B7280;
+    }
+    .modal-content button#cancel:hover {
+      background: #4B5563;
     }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 2rem;
     }
     .service-plate {
       aspect-ratio: 16 / 9;
       position: relative;
       overflow: hidden;
-      background: #f0f0f0;
-      transition: opacity 0.3s ease; /* Smooth transition for darkening */
+      background: #FFFFFF;
+      border: 1px solid #E9ECEF;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
     }
     .service-plate.inactive {
-      opacity: 0.5;
-      pointer-events: none; /* Optional: Prevents clicks on darkened plates */
+      opacity: 0.3;
     }
     .service-plate h2 {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 1rem;
+      left: 1rem;
       margin: 0;
-      color: white;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 0.5rem;
+      color: #FFFFFF;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 1.25rem;
+      font-weight: 500;
     }
     .mosaic-grid {
       display: grid;
@@ -135,9 +170,9 @@
       top: 0;
       left: 0;
       width: 100%;
-      height:  -- You are here --100%;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -145,6 +180,7 @@
       transition: opacity 0.3s ease;
       font-size: 0.9rem;
       text-align: center;
+      font-weight: 400;
     }
     .mosaic-tile:hover img {
       filter: blur(2px);
@@ -169,9 +205,13 @@
       .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem;
       }
       .social-links, .search-container {
         margin-top: 1rem;
+      }
+      #search-input {
+        width: 100%;
       }
     }
   </style>
@@ -181,22 +221,21 @@
     <div class="navbar">
       <a href="/" class="site-name">Dmitriy Kim</a>
       <div class="social-links">
-        <a href="[invalid url, do not cite] target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank">LinkedIn</a>
         <a href="#" id="open-email-form">Email</a>
       </div>
       <div class="search-container">
-        <input type="text" placeholder="Search..." id="search-input">
-        <button type="button" id="search-button"><span class="search-icon">🔍</span></button>
+        <input type="text" placeholder="Search services..." id="search-input">
       </div>
     </div>
   </nav>
   <div id="email-modal" class="modal">
     <div class="modal-content">
       <span class="close">×</span>
-      <form action="[invalid url, do not cite] method="POST">
-        <label for="email">Your Email:</label>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="email">Your Email</label>
         <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
+        <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
         <button type="submit">Send</button>
         <button type="button" id="cancel">Cancel</button>
@@ -208,15 +247,15 @@
       <h2>Consulting</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 1">
+          <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Strategy Development</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 2">
+          <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Business Analysis</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 3">
+          <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Market Research</div>
         </div>
       </div>
@@ -225,15 +264,15 @@
       <h2>Writing</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 1">
+          <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Technical Writing</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 2">
+          <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Blog Content</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 3">
+          <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Copywriting</div>
         </div>
       </div>
@@ -242,15 +281,15 @@
       <h2>Project Management</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 1">
+          <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Agile Implementation</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 2">
+          <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Team Coordination</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 3">
+          <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Risk Management</div>
         </div>
       </div>
@@ -259,15 +298,15 @@
       <h2>Mentoring</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 1">
+          <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Career Coaching</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 2">
+          <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Skill Development</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 3">
+          <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Leadership Training</div>
         </div>
       </div>
@@ -276,15 +315,15 @@
       <h2>Music</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 1">
+          <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Music Production</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 2">
+          <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Live Performance</div>
         </div>
         <div class="mosaic-tile">
-          <img src="[invalid url, do not cite] alt="Project 3">
+          <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Composition</div>
         </div>
       </div>
@@ -317,11 +356,11 @@
 
     // Search Functionality
     document.getElementById('search-input').addEventListener('input', function() {
-      var searchTerm = this.value.toLowerCase();
-      var servicePlates = document.querySelectorAll('.service-plate');
+      const searchTerm = this.value.toLowerCase();
+      const servicePlates = document.querySelectorAll('.service-plate');
       servicePlates.forEach(function(plate) {
-        var captions = plate.querySelectorAll('.caption');
-        var matches = Array.from(captions).some(function(caption) {
+        const captions = plate.querySelectorAll('.caption');
+        const matches = Array.from(captions).some(function(caption) {
           return caption.textContent.toLowerCase().includes(searchTerm);
         });
         if (searchTerm === '' || matches) {
