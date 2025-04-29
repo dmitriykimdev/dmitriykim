@@ -41,6 +41,7 @@
       background: rgba(0, 0, 0, 0.5);
       justify-content: center;
       align-items: center;
+      z-index: 1000; /* Added to ensure modal is on top */
     }
     .modal-content {
       background: white;
@@ -162,10 +163,10 @@
     <div class="navbar">
       <a href="/" class="site-name">Dmitriy Kim</a>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank">LinkedIn</a>
+        <a href="[invalid url, do not cite] target="_blank">LinkedIn</a>
         <a href="#" id="open-email-form">Email</a>
       </div>
-      <form action="https://www.google.com/search" method="get" class="search-form">
+      <form action="[invalid url, do not cite] method="get" class="search-form">
         <input type="text" name="q" placeholder="Search...">
         <input type="hidden" name="sitesearch" value="dmitriykim.com">
         <button type="submit">Search</button>
@@ -174,8 +175,8 @@
   </nav>
   <div id="email-modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <span class="close">×</span>
+      <form action="[invalid url, do not cite] method="POST">
         <label for="email">Your Email:</label>
         <input type="email" id="email" name="email" required>
         <label for="message">Message:</label>
@@ -190,15 +191,15 @@
       <h2>Consulting</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/800x600" alt="Project 1">
+          <img src="[invalid url, do not cite] alt="Project 1">
           <div class="caption">Project 1: Strategy Development</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/400x300" alt="Project 2">
+          <img src="[invalid url, do not cite] alt="Project 2">
           <div class="caption">Project 2: Business Analysis</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/600x450" alt="Project 3">
+          <img src="[invalid url, do not cite] alt="Project 3">
           <div class="caption">Project 3: Market Research</div>
         </div>
       </div>
@@ -207,15 +208,15 @@
       <h2>Writing</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/800x600" alt="Project 1">
+          <img src="[invalid url, do not cite] alt="Project 1">
           <div class="caption">Project 1: Technical Writing</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/400x300" alt="Project 2">
+          <img src="[invalid url, do not cite] alt="Project 2">
           <div class="caption">Project 2: Blog Content</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/600x450" alt="Project 3">
+          <img src="[invalid url, do not cite] alt="Project 3">
           <div class="caption">Project 3: Copywriting</div>
         </div>
       </div>
@@ -224,15 +225,15 @@
       <h2>Project Management</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/800x600" alt="Project 1">
+          <img src="[invalid url, do not cite] alt="Project 1">
           <div class="caption">Project 1: Agile Implementation</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/400x300" alt="Project 2">
+          <img src="[invalid url, do not cite] alt="Project 2">
           <div class="caption">Project 2: Team Coordination</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/600x450" alt="Project 3">
+          <img src="[invalid url, do not cite] alt="Project 3">
           <div class="caption">Project 3: Risk Management</div>
         </div>
       </div>
@@ -241,15 +242,15 @@
       <h2>Mentoring</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/800x600" alt="Project 1">
+          <img src="[invalid url, do not cite] alt="Project 1">
           <div class="caption">Project 1: Career Coaching</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/400x300" alt="Project 2">
+          <img src="[invalid url, do not cite] alt="Project 2">
           <div class="caption">Project 2: Skill Development</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/600x450" alt="Project 3">
+          <img src="[invalid url, do not cite] alt="Project 3">
           <div class="caption">Project 3: Leadership Training</div>
         </div>
       </div>
@@ -258,15 +259,15 @@
       <h2>Music</h2>
       <div class="mosaic-grid">
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/800x600" alt="Project 1">
+          <img src="[invalid url, do not cite] alt="Project 1">
           <div class="caption">Project 1: Music Production</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/400x300" alt="Project 2">
+          <img src="[invalid url, do not cite] alt="Project 2">
           <div class="caption">Project 2: Live Performance</div>
         </div>
         <div class="mosaic-tile">
-          <img src="https://via.placeholder.com/600x450" alt="Project 3">
+          <img src="[invalid url, do not cite] alt="Project 3">
           <div class="caption">Project 3: Composition</div>
         </div>
       </div>
@@ -280,7 +281,6 @@
 
     openModal.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('Opening modal');
       modal.style.display = 'flex';
     });
 
