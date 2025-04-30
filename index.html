@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +7,19 @@
   <!-- Google Fonts (Inter) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Bootstrap 5.3.5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Font Awesome 6.7.2 -->
   <script src="https://kit.fontawesome.com/25b923555b.js" crossorigin="anonymous"></script>
   <!-- Custom CSS -->
   <link href="css/styles.css" rel="stylesheet">
 </head>
-
 <body>
   <!-- Navbar -->
   <nav>
     <div class="navbar">
       <a href="https://linktr.ee/dmitriykim" class="site-name">Dmitriy Kim</a>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank" aria-label="LinkedIn"><i
-            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="#" id="open-email-form" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
       <div class="search-container">
@@ -32,11 +28,13 @@
     </div>
   </nav>
 
-  <!-- Email Form -->
+  <!-- Email Form Modal -->
   <div id="email-modal" class="modal">
     <div class="modal-content">
       <span class="close">×</span>
       <form action="https://formspree.io/f/xpwdqoye" method="POST">
+        <input type="hidden" name="_subject" value="New Contact Form Submission">
+        <input type="hidden" name="_next" value="https://dmitriykim.github.io/personal-website">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="email" required>
         <label for="message">Message</label>
@@ -47,65 +45,68 @@
     </div>
   </div>
 
-  <!-- <form action="https://formspree.io/f/xpwdqoye" method="POST">
-    <label>
-      Your email:
-      <input type="email" name="email">
-    </label>
-    <label>
-      Your message:
-      <textarea name="message"></textarea>
-    </label>
-    <button type="submit">Send</button>
-  </form> -->
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal">
+    <div class="project-modal-content">
+      <span class="close">×</span>
+      <h2 id="project-title"></h2>
+      <img id="project-image" src="" alt="Project Image">
+      <p id="project-caption"></p>
+      <p id="project-description"></p>
+    </div>
+  </div>
 
   <!-- Services Grid -->
   <div class="services-grid">
     <div class="service-plate" id="consulting">
       <h2>Consulting</h2>
       <div class="mosaic-grid" id="consulting1" data-columns="5">
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="consulting-1">
           <img src="pics/1.jpeg" alt="Project 1">
           <div class="caption">Project 1: Strategy Development</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="consulting-2">
           <img src="pics/2.jpg" alt="Project 2">
           <div class="caption">Project 2: Business Analysis</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="consulting-3">
           <img src="pics/3.jpg" alt="Project 3">
           <div class="caption">Project 3: Market Research</div>
         </div>
-        <div class="mosaic-tile">
-          <img src="pics/1.jpeg" alt="Project 1">
-          <div class="caption">Project 1: Strategy Development</div>
+        <div class="mosaic-tile" data-project-id="consulting-4">
+          <img src="pics/1.jpeg" alt="Project 4">
+          <div class="caption">Project 4: Process Optimization</div>
         </div>
-        <div class="mosaic-tile">
-          <img src="pics/1.jpeg" alt="Project 1">
-          <div class="caption">Project 1: Strategy Development</div>
+        <div class="mosaic-tile" data-project-id="consulting-5">
+          <img src="pics/1.jpeg" alt="Project 5">
+          <div class="caption">Project 5: Digital Transformation</div>
         </div>
-        <div class="mosaic-tile">
-          <img src="pics/1.jpeg" alt="Project 1">
-          <div class="caption">Project 1: Strategy Development</div>
+        <div class="mosaic-tile" data-project-id="consulting-6">
+          <img src="pics/1.jpeg" alt="Project 6">
+          <div class="caption">Project 6: Change Management</div>
         </div>
-        <div class="mosaic-tile">
-          <img src="pics/1.jpeg" alt="Project 1">
-          <div class="caption">Project 1: Strategy Development</div>
+        <div class="mosaic-tile" data-project-id="consulting-7">
+          <img src="pics/1.jpeg" alt="Project 7">
+          <div class="caption">Project 7: Innovation Strategy</div>
+        </div>
+        <div class="mosaic-tile" data-project-id="consulting-8">
+          <img src="https://via.placeholder.com/600x450" alt="Test">
+          <div class="caption">Test Suka</div>
         </div>
       </div>
     </div>
     <div class="service-plate" id="writing">
       <h2>Writing</h2>
       <div class="mosaic-grid" id="writing1">
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="writing-1">
           <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Technical Writing</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="writing-2">
           <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Blog Content</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="writing-3">
           <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Copywriting</div>
         </div>
@@ -114,15 +115,15 @@
     <div class="service-plate" id="projects">
       <h2>Projects</h2>
       <div class="mosaic-grid" id="projects1">
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="projects-1">
           <img src="pics/project1.jpg" alt="Project 1">
           <div class="caption">Project 1: Agile Implementation</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="projects-2">
           <img src="pics/project2.jpg" alt="Project 2">
           <div class="caption">Project 2: Team Coordination</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="projects-3">
           <img src="pics/project3.jpg" alt="Project 3">
           <div class="caption">Project 3: Risk Management</div>
         </div>
@@ -131,15 +132,15 @@
     <div class="service-plate" id="mentoring">
       <h2>Mentoring</h2>
       <div class="mosaic-grid" id="mentoring1">
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="mentoring-1">
           <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Career Coaching</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="mentoring-2">
           <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Skill Development</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="mentoring-3">
           <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Leadership Training</div>
         </div>
@@ -148,15 +149,15 @@
     <div class="service-plate" id="music">
       <h2>Music</h2>
       <div class="mosaic-grid" id="music1">
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="music-1">
           <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Music Production</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="music-2">
           <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Live Performance</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="music-3">
           <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Composition</div>
         </div>
@@ -165,15 +166,15 @@
     <div class="service-plate" id="video">
       <h2>Video</h2>
       <div class="mosaic-grid" id="video1">
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="video-1">
           <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Video Production</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="video-2">
           <img src="https://via.placeholder.com/400x300" alt="Project 2">
           <div class="caption">Project 2: Live</div>
         </div>
-        <div class="mosaic-tile">
+        <div class="mosaic-tile" data-project-id="video-3">
           <img src="https://via.placeholder.com/600x450" alt="Project 3">
           <div class="caption">Project 3: Podcast</div>
         </div>
@@ -182,11 +183,8 @@
   </div>
 
   <!-- Bootstrap 5.3.5 JavaScript Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></script>
   <!-- Custom JavaScript -->
   <script src="js/main.js"></script>
 </body>
-
 </html>
