@@ -2,66 +2,10 @@
     {
       "projectId": "consulting-1",
       "serviceId": "consulting",
-      "title": "Strategy Development",
-      "image": "pics/1.jpeg",
-      "caption": "Project 1: Strategy Development",
-      "description": "Developed a comprehensive business strategy for a tech startup, focusing on market entry and growth. Included competitor analysis, SWOT, and 5-year financial projections."
-    },
-    {
-      "projectId": "consulting-2",
-      "serviceId": "consulting",
-      "title": "Business Analysis",
-      "image": "pics/2.jpg",
-      "caption": "Project 2: Business Analysis",
-      "description": "Conducted in-depth business process analysis for a retail chain, optimizing supply chain operations and reducing costs by 15%."
-    },
-    {
-      "projectId": "consulting-3",
-      "serviceId": "consulting",
-      "title": "Market Research",
-      "image": "pics/3.jpg",
-      "caption": "Project 3: Market Research",
-      "description": "Performed market research for a new product launch, identifying target demographics and key trends, resulting in a 20% increase in initial sales."
-    },
-    {
-      "projectId": "consulting-4",
-      "serviceId": "consulting",
-      "title": "Process Optimization",
-      "image": "pics/1.jpeg",
-      "caption": "Project 4: Process Optimization",
-      "description": "Streamlined operational processes for a manufacturing firm, increasing efficiency by 20%."
-    },
-    {
-      "projectId": "consulting-5",
-      "serviceId": "consulting",
-      "title": "Digital Transformation",
-      "image": "pics/1.jpeg",
-      "caption": "Project 5: Digital Transformation",
-      "description": "Guided a company through digital transformation, implementing cloud solutions and improving operational agility."
-    },
-    {
-      "projectId": "consulting-6",
-      "serviceId": "consulting",
-      "title": "Change Management",
-      "image": "pics/1.jpeg",
-      "caption": "Project 6: Change Management",
-      "description": "Managed organizational change during a merger, ensuring smooth transitions and employee alignment."
-    },
-    {
-      "projectId": "consulting-7",
-      "serviceId": "consulting",
-      "title": "Innovation Strategy",
-      "image": "pics/1.jpeg",
-      "caption": "Project 7: Innovation Strategy",
-      "description": "Developed an innovation strategy for a tech firm, leading to the launch of two new product lines."
-    },
-    {
-      "projectId": "consulting-8",
-      "serviceId": "consulting",
-      "title": "Test",
-      "image": "https://via.placeholder.com/600x450",
-      "caption": "Test Suka",
-      "description": "Testing the functionality blyat"
+      "title": "Window Construction Company Consulting",
+      "image": "pics/Consulting1.png",
+      "caption": "Project 1: Individual Entrepreneur Shubin",
+      "description": "Developed a comprehensive business strategy for a construction company specializing on window and glass parts manufacturing and installation. Focusing on improving the process and making it simple, I prepared a consulting proposal that aimed to build a highly effective, continuously evolving team."
     },
     {
       "projectId": "writing-1",
