@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dmitriy Kim - Personal Business Website</title>
+  <!-- Google Fonts (Inter) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <link href="/css/styles.css" rel="stylesheet">
+  <!-- Bootstrap 5.3.5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <!-- Font Awesome 6.7.2 -->
+  <script src="https://kit.fontawesome.com/25b923555b.js" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
+  <!-- Navbar -->
   <nav>
     <div class="navbar">
       <a href="https://linktr.ee/dmitriykim" class="site-name">Dmitriy Kim</a>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank">LinkedIn</i></a>
-        <a href="#" id="open-email-form">Email</a>
+        <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="#" id="open-email-form" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
       <div class="search-container">
         <input type="text" placeholder="Search services..." id="search-input">
       </div>
     </div>
   </nav>
+
+  <!-- Email Form -->
   <div id="email-modal" class="modal">
     <div class="modal-content">
       <span class="close">×</span>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <form action="https://formspree.io/f/xpwdqoye" method="POST">
         <label for="email">Your Email</label>
         <input type="email" id="email" name="email" required>
         <label for="message">Message</label>
@@ -34,10 +46,24 @@
       </form>
     </div>
   </div>
+
+  <!-- <form action="https://formspree.io/f/xpwdqoye" method="POST">
+    <label>
+      Your email:
+      <input type="email" name="email">
+    </label>
+    <label>
+      Your message:
+      <textarea name="message"></textarea>
+    </label>
+    <button type="submit">Send</button>
+  </form> -->
+
+  <!-- Services Grid -->
   <div class="services-grid">
     <div class="service-plate" id="consulting">
       <h2>Consulting</h2>
-      <div class="mosaic-grid" id="consulting1">
+      <div class="mosaic-grid" id="consulting1" data-columns="5">
         <div class="mosaic-tile">
           <img src="pics/1.jpeg" alt="Project 1">
           <div class="caption">Project 1: Strategy Development</div>
@@ -49,6 +75,22 @@
         <div class="mosaic-tile">
           <img src="pics/3.jpg" alt="Project 3">
           <div class="caption">Project 3: Market Research</div>
+        </div>
+        <div class="mosaic-tile">
+          <img src="pics/1.jpeg" alt="Project 1">
+          <div class="caption">Project 1: Strategy Development</div>
+        </div>
+        <div class="mosaic-tile">
+          <img src="pics/1.jpeg" alt="Project 1">
+          <div class="caption">Project 1: Strategy Development</div>
+        </div>
+        <div class="mosaic-tile">
+          <img src="pics/1.jpeg" alt="Project 1">
+          <div class="caption">Project 1: Strategy Development</div>
+        </div>
+        <div class="mosaic-tile">
+          <img src="pics/1.jpeg" alt="Project 1">
+          <div class="caption">Project 1: Strategy Development</div>
         </div>
       </div>
     </div>
@@ -69,19 +111,19 @@
         </div>
       </div>
     </div>
-    <div class="service-plate" id="project-management">
-      <h2>Project Management</h2>
-      <div class="mosaic-grid" id="project-management1">
+    <div class="service-plate" id="projects">
+      <h2>Projects</h2>
+      <div class="mosaic-grid" id="projects1">
         <div class="mosaic-tile">
-          <img src="pics/1" alt="Project 1">
+          <img src="pics/project1.jpg" alt="Project 1">
           <div class="caption">Project 1: Agile Implementation</div>
         </div>
         <div class="mosaic-tile">
-          <img src="pics/2" alt="Project 2">
+          <img src="pics/project2.jpg" alt="Project 2">
           <div class="caption">Project 2: Team Coordination</div>
         </div>
         <div class="mosaic-tile">
-          <img src="pics/3" alt="Project 3">
+          <img src="pics/project3.jpg" alt="Project 3">
           <div class="caption">Project 3: Risk Management</div>
         </div>
       </div>
@@ -105,7 +147,7 @@
     </div>
     <div class="service-plate" id="music">
       <h2>Music</h2>
-      <div class="mosaic-grid">
+      <div class="mosaic-grid" id="music1">
         <div class="mosaic-tile">
           <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Music Production</div>
@@ -122,7 +164,7 @@
     </div>
     <div class="service-plate" id="video">
       <h2>Video</h2>
-      <div class="mosaic-grid">
+      <div class="mosaic-grid" id="video1">
         <div class="mosaic-tile">
           <img src="https://via.placeholder.com/800x600" alt="Project 1">
           <div class="caption">Project 1: Video Production</div>
@@ -138,6 +180,13 @@
       </div>
     </div>
   </div>
+
+  <!-- Bootstrap 5.3.5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"></script>
+  <!-- Custom JavaScript -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
