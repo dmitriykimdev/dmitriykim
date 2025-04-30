@@ -1,29 +1,66 @@
-const openModal = document.getElementById('open-email-form');
-const modal = document.getElementById('email-modal');
-const closeModal = document.querySelector('.close');
+const openEmailModal = document.getElementById('open-email-form');
+const emailModal = document.getElementById('email-modal');
+const closeEmailModal = emailModal.querySelector('.close');
 const cancelButton = document.getElementById('cancel');
 const searchInput = document.getElementById('search-input');
 const servicePlates = document.querySelectorAll('.service-plate');
-const mosaicTiles = document.querySelectorAll('.mosaic-tile');
+const projectModal = document.getElementById('project-modal');
+const closeProjectModal = projectModal.querySelector('.close');
+let projects = [];
 
-// Modal Functionality
-openModal.addEventListener('click', (e) => {
+// Load Projects Data
+fetch('projects.json')
+  .then(response => response.json())
+  .then(data => {
+    projects = data;
+    initializeTiles();
+  })
+  .catch(error => console.error('Error loading projects:', error));
+
+// Initialize Clickable Tiles
+function initializeTiles() {
+  document.querySelectorAll('.mosaic-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      const projectId = tile.dataset.projectId;
+      const project = projects.find(p => p.projectId === projectId);
+      if (project) {
+        document.getElementById('project-title').textContent = project.title;
+        document.getElementById('project-image').src = project.image;
+        document.getElementById('project-image').alt = project.title;
+        document.getElementById('project-caption').textContent = project.caption;
+        document.getElementById('project-description').textContent = project.description;
+        projectModal.style.display = 'flex';
+      }
+    });
+  });
+}
+
+// Email Modal Functionality
+openEmailModal.addEventListener('click', (e) => {
   e.preventDefault();
-  modal.style.display = 'flex';
+  emailModal.style.display = 'flex';
 });
 
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
+closeEmailModal.addEventListener('click', () => {
+  emailModal.style.display = 'none';
 });
 
 cancelButton.addEventListener('click', () => {
-  modal.style.display = 'none';
+  emailModal.style.display = 'none';
 });
 
 window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
+  if (e.target === emailModal) {
+    emailModal.style.display = 'none';
   }
+  if (e.target === projectModal) {
+    projectModal.style.display = 'none';
+  }
+});
+
+// Project Modal Close
+closeProjectModal.addEventListener('click', () => {
+  projectModal.style.display = 'none';
 });
 
 // Search Functionality
@@ -38,7 +75,6 @@ searchInput.addEventListener('input', function() {
 
     plate.classList.toggle('inactive', term !== '' && !matchesPlate);
 
-    // Tile-level filtering within active plates
     const tiles = plate.querySelectorAll('.mosaic-tile');
     tiles.forEach(tile => {
       const captionText = tile.querySelector('.caption').textContent.toLowerCase();
@@ -50,13 +86,11 @@ searchInput.addEventListener('input', function() {
 
 // Randomize Mosaic Grid Columns and Tile Sizes
 document.querySelectorAll('.mosaic-grid').forEach(grid => {
-  // Set column count: use data-columns if specified, else randomize
   const customColumns = parseInt(grid.dataset.columns);
   const possibleColumns = [3, 4, 5, 6, 7, 8];
   const columns = customColumns || possibleColumns[Math.floor(Math.random() * possibleColumns.length)];
   grid.style.setProperty('--columns', columns);
 
-  // Randomize tile sizes
   const tiles = grid.querySelectorAll('.mosaic-tile');
   const sizes = [
     { colSpan: 1, rowSpan: 1 },
