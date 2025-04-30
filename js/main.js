@@ -4,8 +4,9 @@ const closeModal = document.querySelector('.close');
 const cancelButton = document.getElementById('cancel');
 const searchInput = document.getElementById('search-input');
 const servicePlates = document.querySelectorAll('.service-plate');
-const mosaicTiles   = document.querySelectorAll('.mosaic-tile');
+const mosaicTiles = document.querySelectorAll('.mosaic-tile');
 
+// Modal Functionality
 openModal.addEventListener('click', (e) => {
   e.preventDefault();
   modal.style.display = 'flex';
@@ -26,39 +27,51 @@ window.addEventListener('click', (e) => {
 });
 
 // Search Functionality
-// document.getElementById('search-input').addEventListener('input', function() {
-//   const searchTerm = this.value.toLowerCase();
-//   const servicePlates = document.querySelectorAll('.service-plate');
-//   servicePlates.forEach(function(plate) {
-//     const captions = plate.querySelectorAll('.caption');
-//     const matches = Array.from(captions).some(function(caption) {
-//       return caption.textContent.toLowerCase().includes(searchTerm);
-//     });
-//     if (searchTerm === '' || matches) {
-//       plate.classList.remove('inactive');
-//     } else {
-//       plate.classList.add('inactive');
-//     }
-//   });
-// });
-
 searchInput.addEventListener('input', function() {
   const term = this.value.trim().toLowerCase();
 
-  // 1) Plate‐level filtering (as you already have)
   servicePlates.forEach(plate => {
-    const matchesPlate = [...plate.querySelectorAll('.caption')]
-      .some(c => c.textContent.toLowerCase().includes(term));
+    const captions = plate.querySelectorAll('.caption');
+    const matchesPlate = Array.from(captions).some(caption => 
+      caption.textContent.toLowerCase().includes(term)
+    );
 
     plate.classList.toggle('inactive', term !== '' && !matchesPlate);
-  });
 
-  // 2) Tile‐level filtering
-  mosaicTiles.forEach(tile => {
-    const captionText = tile.querySelector('.caption').textContent.toLowerCase();
-    const matchesTile = captionText.includes(term);
-
-    tile.classList.toggle('inactive', term !== '' && !matchesTile);
+    // Tile-level filtering within active plates
+    const tiles = plate.querySelectorAll('.mosaic-tile');
+    tiles.forEach(tile => {
+      const captionText = tile.querySelector('.caption').textContent.toLowerCase();
+      const matchesTile = captionText.includes(term);
+      tile.classList.toggle('inactive', term !== '' && !matchesTile && matchesPlate);
+    });
   });
 });
 
+// Randomize Mosaic Grid Columns and Tile Sizes
+document.querySelectorAll('.mosaic-grid').forEach(grid => {
+  // Set column count: use data-columns if specified, else randomize
+  const customColumns = parseInt(grid.dataset.columns);
+  const possibleColumns = [3, 4, 5, 6, 7, 8];
+  const columns = customColumns || possibleColumns[Math.floor(Math.random() * possibleColumns.length)];
+  grid.style.setProperty('--columns', columns);
+
+  // Randomize tile sizes
+  const tiles = grid.querySelectorAll('.mosaic-tile');
+  const sizes = [
+    { colSpan: 1, rowSpan: 1 },
+    { colSpan: 2, rowSpan: 1 },
+    { colSpan: 1, rowSpan: 2 },
+    { colSpan: 2, rowSpan: 2 },
+    { colSpan: 3, rowSpan: 1 },
+    { colSpan: 1, rowSpan: 3 }
+  ];
+
+  tiles.forEach(tile => {
+    const size = sizes[Math.floor(Math.random() * sizes.length)];
+    const maxColSpan = Math.min(size.colSpan, columns);
+    const maxRowSpan = Math.min(size.rowSpan, 3);
+    tile.style.gridColumn = `span ${maxColSpan}`;
+    tile.style.gridRow = `span ${maxRowSpan}`;
+  });
+});
