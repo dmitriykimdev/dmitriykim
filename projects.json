@@ -1,0 +1,186 @@
+[
+    {
+      "projectId": "consulting-1",
+      "serviceId": "consulting",
+      "title": "Strategy Development",
+      "image": "pics/1.jpeg",
+      "caption": "Project 1: Strategy Development",
+      "description": "Developed a comprehensive business strategy for a tech startup, focusing on market entry and growth. Included competitor analysis, SWOT, and 5-year financial projections."
+    },
+    {
+      "projectId": "consulting-2",
+      "serviceId": "consulting",
+      "title": "Business Analysis",
+      "image": "pics/2.jpg",
+      "caption": "Project 2: Business Analysis",
+      "description": "Conducted in-depth business process analysis for a retail chain, optimizing supply chain operations and reducing costs by 15%."
+    },
+    {
+      "projectId": "consulting-3",
+      "serviceId": "consulting",
+      "title": "Market Research",
+      "image": "pics/3.jpg",
+      "caption": "Project 3: Market Research",
+      "description": "Performed market research for a new product launch, identifying target demographics and key trends, resulting in a 20% increase in initial sales."
+    },
+    {
+      "projectId": "consulting-4",
+      "serviceId": "consulting",
+      "title": "Process Optimization",
+      "image": "pics/1.jpeg",
+      "caption": "Project 4: Process Optimization",
+      "description": "Streamlined operational processes for a manufacturing firm, increasing efficiency by 20%."
+    },
+    {
+      "projectId": "consulting-5",
+      "serviceId": "consulting",
+      "title": "Digital Transformation",
+      "image": "pics/1.jpeg",
+      "caption": "Project 5: Digital Transformation",
+      "description": "Guided a company through digital transformation, implementing cloud solutions and improving operational agility."
+    },
+    {
+      "projectId": "consulting-6",
+      "serviceId": "consulting",
+      "title": "Change Management",
+      "image": "pics/1.jpeg",
+      "caption": "Project 6: Change Management",
+      "description": "Managed organizational change during a merger, ensuring smooth transitions and employee alignment."
+    },
+    {
+      "projectId": "consulting-7",
+      "serviceId": "consulting",
+      "title": "Innovation Strategy",
+      "image": "pics/1.jpeg",
+      "caption": "Project 7: Innovation Strategy",
+      "description": "Developed an innovation strategy for a tech firm, leading to the launch of two new product lines."
+    },
+    {
+      "projectId": "consulting-8",
+      "serviceId": "consulting",
+      "title": "Test",
+      "image": "https://via.placeholder.com/600x450",
+      "caption": "Test Suka",
+      "description": "Testing the functionality blyat"
+    },
+    {
+      "projectId": "writing-1",
+      "serviceId": "writing",
+      "title": "Technical Writing",
+      "image": "https://via.placeholder.com/800x600",
+      "caption": "Project 1: Technical Writing",
+      "description": "Authored a 50-page technical manual for a software platform, improving user onboarding by 30%."
+    },
+    {
+      "projectId": "writing-2",
+      "serviceId": "writing",
+      "title": "Blog Content",
+      "image": "https://via.placeholder.com/400x300",
+      "caption": "Project 2: Blog Content",
+      "description": "Wrote a series of SEO-optimized blog posts for a tech company, driving 10,000 monthly visitors."
+    },
+    {
+      "projectId": "writing-3",
+      "serviceId": "writing",
+      "title": "Copywriting",
+      "image": "https://via.placeholder.com/600x450",
+      "caption": "Project 3: Copywriting",
+      "description": "Crafted compelling ad copy for a marketing campaign, increasing click-through rates by 25%."
+    },
+    {
+      "projectId": "projects-1",
+      "serviceId": "projects",
+      "title": "Agile Implementation",
+      "image": "pics/project1.jpg",
+      "caption": "Project 1: Agile Implementation",
+      "description": "Led Agile transformation for a software development team, reducing delivery time by 40%."
+    },
+    {
+      "projectId": "projects-2",
+      "serviceId": "projects",
+      "title": "Team Coordination",
+      "image": "pics/project2.jpg",
+      "caption": "Project 2: Team Coordination",
+      "description": "Managed cross-functional teams for a product launch, ensuring on-time delivery within budget."
+    },
+    {
+      "projectId": "projects-3",
+      "serviceId": "projects",
+      "title": "Risk Management",
+      "image": "pics/project3.jpg",
+      "caption": "Project 3: Risk Management",
+      "description": "Developed a risk management plan for a construction project, mitigating delays and cost overruns."
+    },
+    {
+      "projectId": "mentoring-1",
+      "serviceId": "mentoring",
+      "title": "Career Coaching",
+      "image": "https://via.placeholder.com/800x600",
+      "caption": "Project 1: Career Coaching",
+      "description": "Provided one-on-one career coaching to 10 professionals, helping them secure promotions or new roles."
+    },
+    {
+      "projectId": "mentoring-2",
+      "serviceId": "mentoring",
+      "title": "Skill Development",
+      "image": "https://via.placeholder.com/400x300",
+      "caption": "Project 2: Skill Development",
+      "description": "Designed a skill development program for junior developers, improving coding proficiency by 50%."
+    },
+    {
+      "projectId": "mentoring-3",
+      "serviceId": "mentoring",
+      "title": "Leadership Training",
+      "image": "https://via.placeholder.com/600x450",
+      "caption": "Project 3: Leadership Training",
+      "description": "Conducted leadership workshops for mid-level managers, enhancing team performance metrics."
+    },
+    {
+      "projectId": "music-1",
+      "serviceId": "music",
+      "title": "Music Production",
+      "image": "https://via.placeholder.com/800x600",
+      "caption": "Project 1: Music Production",
+      "description": "Produced a 5-track EP for an indie artist, achieving 10,000 streams in the first month."
+    },
+    {
+      "projectId": "music-2",
+      "serviceId": "music",
+      "title": "Live Performance",
+      "image": "https://via.placeholder.com/400x300",
+      "caption": "Project 2: Live Performance",
+      "description": "Organized and performed at a live music event, attracting 500 attendees."
+    },
+    {
+      "projectId": "music-3",
+      "serviceId": "music",
+      "title": "Composition",
+      "image": "https://via.placeholder.com/600x450",
+      "caption": "Project 3: Composition",
+      "description": "Composed original music for a short film, nominated for a local film festival award."
+    },
+    {
+      "projectId": "video-1",
+      "serviceId": "video",
+      "title": "Video Production",
+      "image": "https://via.placeholder.com/800x600",
+      "caption": "Project 1: Video Production",
+      "description": "Produced a corporate promotional video, viewed by 50,000 users on social media."
+    },
+    {
+      "projectId": "video-2",
+      "serviceId": "video",
+      "title": "Live",
+      "image": "https://via.placeholder.com/400x300",
+      "caption": "Project 2: Live",
+      "description": "Directed a live-streamed event, reaching 1,000 concurrent viewers."
+    },
+    {
+      "projectId": "video-3",
+      "serviceId": "video",
+      "title": "Podcast",
+      "image": "https://via.placeholder.com/600x450",
+      "caption": "Project 3: Podcast",
+      "description": "Edited and produced a 10-episode podcast series, downloaded 5,000 times."
+    }
+  ]
