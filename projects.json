@@ -1,130 +1,292 @@
 [
     {
-      "projectId": "consulting-1",
-      "serviceId": "consulting",
-      "title": "Window Construction Company Consulting",
-      "image": "pics/Consulting1.png",
-      "caption": "Project 1: Individual Entrepreneur Shubin",
-      "description": "Developed a comprehensive business strategy for a construction company specializing on window and glass parts manufacturing and installation. Focusing on improving the process and making it simple, I prepared a consulting proposal that aimed to build a highly effective, continuously evolving team."
+        "projectId": "consulting-1",
+        "serviceId": "consulting",
+        "title": "Window Construction Company Consulting",
+        "image": "pics/Consulting1.png",
+        "caption": "Project 1: Individual Entrepreneur Shubin",
+        "description": "Developed a comprehensive business strategy for a construction company specializing on window and glass parts manufacturing and installation. Focusing on improving the process and making it simple, I prepared a consulting proposal that aimed to build a highly effective, continuously evolving team."
     },
     {
-      "projectId": "writing-1",
-      "serviceId": "writing",
-      "title": "Technical Writing",
-      "image": "https://via.placeholder.com/800x600",
-      "caption": "Project 1: Technical Writing",
-      "description": "Authored a 50-page technical manual for a software platform, improving user onboarding by 30%."
+        "projectId": "writing-1",
+        "serviceId": "writing",
+        "title": "Resultism Guide v1.0",
+        "image": "pics/Writing1.png",
+        "caption": "New Project Management Methodology",
+        "description": "<h1><span style="font-weight: 400;">Resultism Guide v1.0 (2025)</span></h1>
+<h1><span style="font-weight: 400;">Only. Results. Matter.</span></h1>
+<h1>&nbsp;</h1>
+<h1><span style="font-weight: 400;">Overview</span></h1>
+<p><span style="font-weight: 400;">Resultism&trade; is a clearly defined workflow methodology that, if properly followed, allows teams to get any kind of work done without burnout, micromanagement, and passive aggression. By leveraging the advantages and disadvantages of real-life working environments, Resultism aims to drive the only thing that truly matters at work: results. Although seemingly prescriptive, Resultism outlines and enforces the absolute necessary behaviors for achieving results without overstepping professional and personal boundaries. Being purposefully minimalistic, the methodology can be used in combination with other methodologies, principles, and frameworks, but the possible interference from the additional elements not mentioned in this guide should not be attributed to Resultism. Resultism does not aim to reform or reinvent the way a work is done. Resultism does not aim to synchronize the team or make it &ldquo;feel like a family.&rdquo; Resultism&rsquo;s one and only purpose is for the team to achieve the best possible results.</span></p>
+<h1><span style="font-weight: 400;">Key features</span></h1>
+<ol>
+<li style="font-weight: 400;"><strong>Autonomy. </strong><span style="font-weight: 400;">Resultism empowers self-management as long as the expected results are delivered. However, if the results cannot be delivered, direct management is always an option.</span></li>
+<li style="font-weight: 400;"><strong>Inclusion</strong><span style="font-weight: 400;">. Traditional Agile methodologies stem mostly from IT, thus focusing on addressing uncertainty and delivering features or iterations of the final product. Resultism focuses on delivering results at scale, both in IT and non-IT industries, where work can be both certain and uncertain, feature-based or service-based. Thus, Resultism excels at managing even mundane repetitive work, while maintaining great flexibility to address uncertainty of creative and/or complex work.</span></li>
+<li style="font-weight: 400;"><strong>Scalability. </strong><span style="font-weight: 400;">Resultism can be easily implemented at any scale because it is non-restrictive in terms of structure or workflow, while being very clearly defined in terms of expected outcomes of each element of the workflow. Thus, it is perfect for scaling, enhancing, merging, and expanding teams and businesses of any type.</span></li>
+<li style="font-weight: 400;"><strong>Integration. </strong><span style="font-weight: 400;">Resultism can easily integrate and cooperate with other working styles, including, but not limited to Agile, Scrum, XP, Kanban, and Waterfall. Both within the team and externally with teams using other frameworks. That is achieved by focusing on results, expectations, and outcomes rather than ways of communication or workstyles.</span></li>
+<li style="font-weight: 400;"><strong>Flexibility. </strong><span style="font-weight: 400;">As opposed to Agile, Scrum, Kanban and other methodologies where a work backlog is created and given to the team, Resultism creates a set of results required from the Workers. As long as the expected results are clear and can be achieved by a certain time, the requirements can be provided in any format.</span></li>
+<li style="font-weight: 400;"><strong>Simplicity.</strong><span style="font-weight: 400;"> While other methodologies require fine-tuning and multiple adjacent practices and tools to work, this guide already includes everything you need to make it work. For example, it is not a secret that Scrum is often used with Kanban to visualize the work, while Kanban itself has multiple add-ons like Item Aging, WIP Limit, Throughput, etc. Those additional practices were carefully filtered and included in this guide for your convenience.</span></li>
+<li style="font-weight: 400;"><strong>Responsibility. </strong><span style="font-weight: 400;">Since the expected results have to be clearly outlined and achieved, Resultism naturally holds each party accountable. The methodology was created with the purpose to introduce and constantly enforce freedom and self-management in balance with responsibility, as there are no other binding or distracting elements (like meetings or &ldquo;ceremonies&rdquo;) apart from Results.</span></li>
+</ol>
+<h1><span style="font-weight: 400;">Background</span></h1>
+<p><span style="font-weight: 400;">First of all, Resultism&trade; has no connection with ROWE (Results Only Working Environment), which I respect and am familiar with nonetheless. Resultism stems from my understanding of multiple methodologies and frameworks coupled with extensive real work experience as a project manager, which can often be the complete opposite of what the methodologies describe. Having worked in South Korea, which is notorious for its oppressive and highly stressful working environment, with little to no ability to implement Agile, I devised and implemented the working principles outlined in this guide in my work to achieve the needed results and maintain a healthy lifestyle, both mentally and physically.</span></p>
+<p><span style="font-weight: 400;">While I acknowledge that other methodologies can achieve wonderful results and create amazing cultures, I also realize that oftentimes it is impossible to implement them before it is too late. Sometimes, to make existing methodologies and frameworks effective, roles have to be reassigned, people have to be reeducated, and some complicated tools have to be used. Instead of taking on those gargantuan tasks, Resultism singles out the behaviors that contribute to results, creating a pathway to success that can be used as a reference by anyone regardless of seniority or line of work.</span></p>
+<p><span style="font-weight: 400;">To make an analogy, imagine that you have to get to the sea (results) while going down a river (workflow) with multiple sub-streams (excessive communication, endless meetings, micromanagement, scope creep, etc.). Resultism aims to find the main trajectory that leads to the sea, while making the sub-streams apparent and giving you the choice on what to do about them.</span></p>
+<h1><span style="font-weight: 400;">Rules</span></h1>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Only. Results. Matter.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Everything else comes from and after results.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Where, when, and how anyone works is no one&rsquo;s business if the work is done.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Less is more.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">If it can be an email, it should be one.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work is work. The rest is the rest.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">If a team uses Resultism&trade;, its members can use this guide as the ultimate reference to settle disputes.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">No &ldquo;walk-in&rdquo; or &ldquo;on-foot&rdquo; requests.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">All work is managed using appropriate programs.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">No status updates - refer to the Board.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">No meetings unless absolutely necessary.</span></li>
+</ol>
+<h1><span style="font-weight: 400;">Artifacts &amp; Terms</span></h1>
+<ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">The Board</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Kanban board - physical or digital.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Accessible to anyone, but managed by Results Manager and Workers, except for Finish Line, which is Results Driver&rsquo;s responsibility.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Provides transparency and becomes the Single Source of Truth for the team and stakeholders.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Divided into Swimlanes for each department/role/specialist.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The WIP Limit (Work In Progress Limit - the maximum number of tickets in a single column) is the number of people on the team.</span></li>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">The Finish Line</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The set of results that are expected from the entire team and from each swimlane, placed at the rightmost end of the board with the following details:</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A brief description of the result - non-technical, actual end result.</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">For example, &ldquo;Create a login page for our application.&rdquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A (automated or pre-configured) checklist of criteria that will be used to (in)validate the results.</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">For example, &ldquo;1. Login/PW work. 2. Delivered exactly on time. 3. Other buttons like Support are functional. 4. Documentation is ready for client sign-off.&rdquo;</span></li>
+</ol>
+</ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">All the responsible assignees.</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">There will not be &ldquo;too many notifications,&rdquo; as the Finish Line will only have general expected results</span></li>
+</ol>
+</ol>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Swimlane</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A specific team or role, marked by horizontal borders across the Board, limiting their area of work.</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Swimlanes can have an additional Swimlane Finish before the general Finish Line.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Swimlane Finish is managed by Results Driver as well.</span></li>
+</ol>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Ticket</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A sub-result that needs to be delivered within a swimlane.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Must include:</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A brief description of the result - in any form, including technical tasks.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A (automated or pre-configured) checklist of criteria that will be used to (in)validate the results.</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">For example, &ldquo;1. Login/PW work. 2. Delivered exactly on time. 3. Other buttons like Support are functional. 4. Documentation is ready for client sign-off.&rdquo;</span></li>
+</ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Due date.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Assignment of other teams or parties that require or are affected by the result, including the Inspector.</span></li>
+</ol>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Neutral Message (NM)</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A structured template of communication to be used by everyone on the team.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Aimed to eliminate passive aggression, misunderstandings, and miscommunications.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Regardless of the perceived tone and politeness, it should always be evaluated objectively at face value, as a container for information.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Consists of the following:</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Greetings.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Requests in the form of bullet points with the following structure:</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">What.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">By when.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">(Optional) Why.</span></li>
+</ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Questions in the form of bullet points. Example:</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Question: is it possible to put labels on all of the MR36 with their service periods?</span></li>
+</ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Comments in the form of bullet points. Example:</span></li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Comment: would be nice to have cable patching done prior to the IT team's visit, but no pressure.</span></li>
+</ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Goodbyes.</span></li>
+</ol>
+</ol>
+</ol>
+<h1><span style="font-weight: 400;">Roles</span></h1>
+<p><span style="font-weight: 400;">It is not mandatory to assign the roles to separate individuals. As long as they are properly performed, they can be assigned to as many people as needed.</span></p>
+<ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Results Inspector</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Knows the end results that need to be delivered.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Constantly communicates with Results Driver to align on the results expected.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Doesn&rsquo;t communicate with the rest of the team</span></li>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Results Driver</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Manages the results requirements.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Constantly updates the Finish Line.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Breaks down the expected results for each swimlane and/or role if necessary.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensures that all the results are synchronized and detailed.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Configures the necessary checklists and quality criteria for the results.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Configures automations and other tools related to the results.</span></li>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Results Manager</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensures that the results are delivered.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Helps the team to deliver acceptable results on time by any means necessary.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The level of responsibility for the results is directly proportional with the level of authority over the project and the team.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creates and maintains a process map, which outlines only the necessary elements and parties to achieve results.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Maintains comprehensive project documentation.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Measures necessary work KPIs and other measurements that will help align future expectations regarding results and timelines.</span></li>
+</ol>
+<li style="font-weight: 400;">
+<h2><span style="font-weight: 400;">Worker</span></h2>
+</li>
+<ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Does the work.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Workers manage their own work as long as the needed results are achieved, without external interference.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Request help from Results Manager if necessary (only by creating a Ticket).</span></li>
+</ol>
+</ol>
+<p><br /><br /></p>"
     },
     {
-      "projectId": "writing-2",
-      "serviceId": "writing",
-      "title": "Blog Content",
-      "image": "https://via.placeholder.com/400x300",
-      "caption": "Project 2: Blog Content",
-      "description": "Wrote a series of SEO-optimized blog posts for a tech company, driving 10,000 monthly visitors."
+        "projectId": "writing-2",
+        "serviceId": "writing",
+        "title": "Blog Content",
+        "image": "https://via.placeholder.com/400x300",
+        "caption": "Project 2: Blog Content",
+        "description": "Wrote a series of SEO-optimized blog posts for a tech company, driving 10,000 monthly visitors."
     },
     {
-      "projectId": "writing-3",
-      "serviceId": "writing",
-      "title": "Copywriting",
-      "image": "https://via.placeholder.com/600x450",
-      "caption": "Project 3: Copywriting",
-      "description": "Crafted compelling ad copy for a marketing campaign, increasing click-through rates by 25%."
+        "projectId": "writing-3",
+        "serviceId": "writing",
+        "title": "Copywriting",
+        "image": "https://via.placeholder.com/600x450",
+        "caption": "Project 3: Copywriting",
+        "description": "Crafted compelling ad copy for a marketing campaign, increasing click-through rates by 25%."
     },
     {
-      "projectId": "projects-1",
-      "serviceId": "projects",
-      "title": "Agile Implementation",
-      "image": "pics/project1.jpg",
-      "caption": "Project 1: Agile Implementation",
-      "description": "Led Agile transformation for a software development team, reducing delivery time by 40%."
+        "projectId": "projects-1",
+        "serviceId": "projects",
+        "title": "Agile Implementation",
+        "image": "pics/project1.jpg",
+        "caption": "Project 1: Agile Implementation",
+        "description": "Led Agile transformation for a software development team, reducing delivery time by 40%."
     },
     {
-      "projectId": "projects-2",
-      "serviceId": "projects",
-      "title": "Team Coordination",
-      "image": "pics/project2.jpg",
-      "caption": "Project 2: Team Coordination",
-      "description": "Managed cross-functional teams for a product launch, ensuring on-time delivery within budget."
+        "projectId": "projects-2",
+        "serviceId": "projects",
+        "title": "Team Coordination",
+        "image": "pics/project2.jpg",
+        "caption": "Project 2: Team Coordination",
+        "description": "Managed cross-functional teams for a product launch, ensuring on-time delivery within budget."
     },
     {
-      "projectId": "projects-3",
-      "serviceId": "projects",
-      "title": "Risk Management",
-      "image": "pics/project3.jpg",
-      "caption": "Project 3: Risk Management",
-      "description": "Developed a risk management plan for a construction project, mitigating delays and cost overruns."
+        "projectId": "projects-3",
+        "serviceId": "projects",
+        "title": "Risk Management",
+        "image": "pics/project3.jpg",
+        "caption": "Project 3: Risk Management",
+        "description": "Developed a risk management plan for a construction project, mitigating delays and cost overruns."
     },
     {
-      "projectId": "mentoring-1",
-      "serviceId": "mentoring",
-      "title": "Career Coaching",
-      "image": "https://via.placeholder.com/800x600",
-      "caption": "Project 1: Career Coaching",
-      "description": "Provided one-on-one career coaching to 10 professionals, helping them secure promotions or new roles."
+        "projectId": "mentoring-1",
+        "serviceId": "mentoring",
+        "title": "Career Coaching",
+        "image": "https://via.placeholder.com/800x600",
+        "caption": "Project 1: Career Coaching",
+        "description": "Provided one-on-one career coaching to 10 professionals, helping them secure promotions or new roles."
     },
     {
-      "projectId": "mentoring-2",
-      "serviceId": "mentoring",
-      "title": "Skill Development",
-      "image": "https://via.placeholder.com/400x300",
-      "caption": "Project 2: Skill Development",
-      "description": "Designed a skill development program for junior developers, improving coding proficiency by 50%."
+        "projectId": "mentoring-2",
+        "serviceId": "mentoring",
+        "title": "Skill Development",
+        "image": "https://via.placeholder.com/400x300",
+        "caption": "Project 2: Skill Development",
+        "description": "Designed a skill development program for junior developers, improving coding proficiency by 50%."
     },
     {
-      "projectId": "mentoring-3",
-      "serviceId": "mentoring",
-      "title": "Leadership Training",
-      "image": "https://via.placeholder.com/600x450",
-      "caption": "Project 3: Leadership Training",
-      "description": "Conducted leadership workshops for mid-level managers, enhancing team performance metrics."
+        "projectId": "mentoring-3",
+        "serviceId": "mentoring",
+        "title": "Leadership Training",
+        "image": "https://via.placeholder.com/600x450",
+        "caption": "Project 3: Leadership Training",
+        "description": "Conducted leadership workshops for mid-level managers, enhancing team performance metrics."
     },
     {
-      "projectId": "music-1",
-      "serviceId": "music",
-      "title": "Music Production",
-      "image": "https://via.placeholder.com/800x600",
-      "caption": "Project 1: Music Production",
-      "description": "Produced a 5-track EP for an indie artist, achieving 10,000 streams in the first month."
+        "projectId": "music-1",
+        "serviceId": "music",
+        "title": "Music Production",
+        "image": "https://via.placeholder.com/800x600",
+        "caption": "Project 1: Music Production",
+        "description": "Produced a 5-track EP for an indie artist, achieving 10,000 streams in the first month."
     },
     {
-      "projectId": "music-2",
-      "serviceId": "music",
-      "title": "Live Performance",
-      "image": "https://via.placeholder.com/400x300",
-      "caption": "Project 2: Live Performance",
-      "description": "Organized and performed at a live music event, attracting 500 attendees."
+        "projectId": "music-2",
+        "serviceId": "music",
+        "title": "Live Performance",
+        "image": "https://via.placeholder.com/400x300",
+        "caption": "Project 2: Live Performance",
+        "description": "Organized and performed at a live music event, attracting 500 attendees."
     },
     {
-      "projectId": "music-3",
-      "serviceId": "music",
-      "title": "Composition",
-      "image": "https://via.placeholder.com/600x450",
-      "caption": "Project 3: Composition",
-      "description": "Composed original music for a short film, nominated for a local film festival award."
+        "projectId": "music-3",
+        "serviceId": "music",
+        "title": "Composition",
+        "image": "https://via.placeholder.com/600x450",
+        "caption": "Project 3: Composition",
+        "description": "Composed original music for a short film, nominated for a local film festival award."
     },
     {
-      "projectId": "video-1",
-      "serviceId": "video",
-      "title": "Video Production",
-      "image": "https://via.placeholder.com/800x600",
-      "caption": "Project 1: Video Production",
-      "description": "Produced a corporate promotional video, viewed by 50,000 users on social media."
+        "projectId": "video-1",
+        "serviceId": "video",
+        "title": "Video Production",
+        "image": "https://via.placeholder.com/800x600",
+        "caption": "Project 1: Video Production",
+        "description": "Produced a corporate promotional video, viewed by 50,000 users on social media."
     },
     {
-      "projectId": "video-2",
-      "serviceId": "video",
-      "title": "Live",
-      "image": "https://via.placeholder.com/400x300",
-      "caption": "Project 2: Live",
-      "description": "Directed a live-streamed event, reaching 1,000 concurrent viewers."
+        "projectId": "video-2",
+        "serviceId": "video",
+        "title": "Live",
+        "image": "https://via.placeholder.com/400x300",
+        "caption": "Project 2: Live",
+        "description": "Directed a live-streamed event, reaching 1,000 concurrent viewers."
     },
     {
-      "projectId": "video-3",
-      "serviceId": "video",
-      "title": "Podcast",
-      "image": "https://via.placeholder.com/600x450",
-      "caption": "Project 3: Podcast",
-      "description": "Edited and produced a 10-episode podcast series, downloaded 5,000 times."
+        "projectId": "video-3",
+        "serviceId": "video",
+        "title": "Podcast",
+        "image": "https://via.placeholder.com/600x450",
+        "caption": "Project 3: Podcast",
+        "description": "Edited and produced a 10-episode podcast series, downloaded 5,000 times."
     }
-  ]
+]
