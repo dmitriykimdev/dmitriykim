@@ -1,7 +1,20 @@
+// Modal Variables
 const openEmailModal = document.getElementById('open-email-form');
 const emailModal = document.getElementById('email-modal');
 const closeEmailModal = emailModal.querySelector('.close');
 const cancelButton = document.getElementById('cancel');
+const openPriceListModal = document.getElementById('open-price-list');
+const priceListModal = document.getElementById('price-list-modal');
+const closePriceListModal = priceListModal.querySelector('.close');
+const openPrivacyPolicy = document.getElementById('open-privacy-policy');
+const privacyPolicyModal = document.getElementById('privacy-policy-modal');
+const closePrivacyPolicy = privacyPolicyModal.querySelector('.close');
+const openTermsService = document.getElementById('open-terms-service');
+const termsServiceModal = document.getElementById('terms-service-modal');
+const closeTermsService = termsServiceModal.querySelector('.close');
+const footerOpenEmailForm = document.getElementById('footer-open-email-form');
+const privacyToEmail = document.getElementById('privacy-to-email');
+const termsToEmail = document.getElementById('terms-to-email');
 const searchInput = document.getElementById('search-input');
 const servicePlates = document.querySelectorAll('.service-plate');
 const projectModal = document.getElementById('project-modal');
@@ -15,7 +28,7 @@ fetch('projects.json')
     return response.json();
   })
   .then(data => {
-    console.log('Projects loaded:', data); // Debug
+    console.log('Projects loaded:', data);
     projects = data;
     initializeTiles();
   })
@@ -26,10 +39,10 @@ function initializeTiles() {
   document.querySelectorAll('.mosaic-tile').forEach(tile => {
     tile.addEventListener('click', () => {
       const projectId = tile.dataset.projectId;
-      console.log('Tile clicked:', projectId); // Debug
+      console.log('Tile clicked:', projectId);
       const project = projects.find(p => p.projectId === projectId);
       if (project) {
-        console.log('Project found:', project); // Debug
+        console.log('Project found:', project);
         document.getElementById('project-title').textContent = project.title;
         document.getElementById('project-image').src = project.image;
         document.getElementById('project-image').alt = project.title;
@@ -37,7 +50,7 @@ function initializeTiles() {
         document.getElementById('project-description').innerHTML = project.description;
         projectModal.style.display = 'flex';
       } else {
-        console.log('Project not found for ID:', projectId); // Debug
+        console.log('Project not found for ID:', projectId);
       }
     });
   });
@@ -57,6 +70,59 @@ cancelButton.addEventListener('click', () => {
   emailModal.style.display = 'none';
 });
 
+footerOpenEmailForm.addEventListener('click', (e) => {
+  e.preventDefault();
+  emailModal.style.display = 'flex';
+});
+
+privacyToEmail.addEventListener('click', (e) => {
+  e.preventDefault();
+  privacyPolicyModal.style.display = 'none';
+  emailModal.style.display = 'flex';
+});
+
+termsToEmail.addEventListener('click', (e) => {
+  e.preventDefault();
+  termsServiceModal.style.display = 'none';
+  emailModal.style.display = 'flex';
+});
+
+// Price List Modal
+openPriceListModal.addEventListener('click', (e) => {
+  e.preventDefault();
+  priceListModal.style.display = 'flex';
+});
+
+closePriceListModal.addEventListener('click', () => {
+  priceListModal.style.display = 'none';
+});
+
+// Privacy Policy Modal
+openPrivacyPolicy.addEventListener('click', (e) => {
+  e.preventDefault();
+  privacyPolicyModal.style.display = 'flex';
+});
+
+closePrivacyPolicy.addEventListener('click', () => {
+  privacyPolicyModal.style.display = 'none';
+});
+
+// Terms of Service Modal
+openTermsService.addEventListener('click', (e) => {
+  e.preventDefault();
+  termsServiceModal.style.display = 'flex';
+});
+
+closeTermsService.addEventListener('click', () => {
+  termsServiceModal.style.display = 'none';
+});
+
+// Project Modal Close
+closeProjectModal.addEventListener('click', () => {
+  projectModal.style.display = 'none';
+});
+
+// Click Outside to Close Modals
 window.addEventListener('click', (e) => {
   if (e.target === emailModal) {
     emailModal.style.display = 'none';
@@ -73,11 +139,6 @@ window.addEventListener('click', (e) => {
   if (e.target === termsServiceModal) {
     termsServiceModal.style.display = 'none';
   }
-});
-
-// Project Modal Close
-closeProjectModal.addEventListener('click', () => {
-  projectModal.style.display = 'none';
 });
 
 // Search Functionality
@@ -124,77 +185,5 @@ document.querySelectorAll('.mosaic-grid').forEach(grid => {
     const maxRowSpan = Math.min(size.rowSpan, 3);
     tile.style.gridColumn = `span ${maxColSpan}`;
     tile.style.gridRow = `span ${maxRowSpan}`;
-  });
-
-  // Prices Modal
-  const openPriceListModal = document.getElementById('open-price-list');
-  const priceListModal = document.getElementById('price-list-modal');
-  const closePriceListModal = priceListModal.querySelector('.close');
-
-  openPriceListModal.addEventListener('click', (e) => {
-    e.preventDefault();
-    priceListModal.style.display = 'flex';
-  });
-
-  closePriceListModal.addEventListener('click', () => {
-    priceListModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === priceListModal) {
-      priceListModal.style.display = 'none';
-    }
-  });
-
-  // Footer Email Modal Trigger
-  const footerOpenEmailForm = document.getElementById('footer-open-email-form');
-
-  footerOpenEmailForm.addEventListener('click', (e) => {
-    e.preventDefault();
-    emailModal.style.display = 'flex';
-  });
-
-  // In-Modal Contact Links
-  const privacyToEmail = document.getElementById('privacy-to-email');
-  const termsToEmail = document.getElementById('terms-to-email');
-
-  privacyToEmail.addEventListener('click', (e) => {
-    e.preventDefault();
-    privacyPolicyModal.style.display = 'none';
-    emailModal.style.display = 'flex';
-  });
-
-  termsToEmail.addEventListener('click', (e) => {
-    e.preventDefault();
-    termsServiceModal.style.display = 'none';
-    emailModal.style.display = 'flex';
-  });
-
-  // Terms of Service Modal
-  const openTermsService = document.getElementById('open-terms-service');
-  const termsServiceModal = document.getElementById('terms-service-modal');
-  const closeTermsService = termsServiceModal.querySelector('.close');
-
-  openTermsService.addEventListener('click', (e) => {
-    e.preventDefault();
-    termsServiceModal.style.display = 'flex';
-  });
-
-  closeTermsService.addEventListener('click', () => {
-    termsServiceModal.style.display = 'none';
-  });
-
-  // Privacy Policy Modal
-  const openPrivacyPolicy = document.getElementById('open-privacy-policy');
-  const privacyPolicyModal = document.getElementById('privacy-policy-modal');
-  const closePrivacyPolicy = privacyPolicyModal.querySelector('.close');
-
-  openPrivacyPolicy.addEventListener('click', (e) => {
-    e.preventDefault();
-    privacyPolicyModal.style.display = 'flex';
-  });
-
-  closePrivacyPolicy.addEventListener('click', () => {
-    privacyPolicyModal.style.display = 'none';
   });
 });
