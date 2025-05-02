@@ -197,7 +197,7 @@
         "projectId": "projects-1",
         "serviceId": "projects",
         "title": "Agile Implementation",
-        "image": "pics/project1.jpg",
+        "image": ""https://via.placeholder.com/600x450"",
         "caption": "Project 1: Agile Implementation",
         "description": "Led Agile transformation for a software development team, reducing delivery time by 40%."
     },
@@ -205,7 +205,7 @@
         "projectId": "projects-2",
         "serviceId": "projects",
         "title": "Team Coordination",
-        "image": "pics/project2.jpg",
+        "image": ""https://via.placeholder.com/600x450"",
         "caption": "Project 2: Team Coordination",
         "description": "Managed cross-functional teams for a product launch, ensuring on-time delivery within budget."
     },
@@ -213,7 +213,7 @@
         "projectId": "projects-3",
         "serviceId": "projects",
         "title": "Risk Management",
-        "image": "pics/project3.jpg",
+        "image": ""https://via.placeholder.com/600x450"",
         "caption": "Project 3: Risk Management",
         "description": "Developed a risk management plan for a construction project, mitigating delays and cost overruns."
     },
