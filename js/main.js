@@ -10,8 +10,12 @@ let projects = [];
 
 // Load Projects Data
 fetch('projects.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to fetch projects.json');
+    return response.json();
+  })
   .then(data => {
+    console.log('Projects loaded:', data); // Debug
     projects = data;
     initializeTiles();
   })
@@ -22,14 +26,18 @@ function initializeTiles() {
   document.querySelectorAll('.mosaic-tile').forEach(tile => {
     tile.addEventListener('click', () => {
       const projectId = tile.dataset.projectId;
+      console.log('Tile clicked:', projectId); // Debug
       const project = projects.find(p => p.projectId === projectId);
       if (project) {
+        console.log('Project found:', project); // Debug
         document.getElementById('project-title').textContent = project.title;
         document.getElementById('project-image').src = project.image;
         document.getElementById('project-image').alt = project.title;
         document.getElementById('project-caption').textContent = project.caption;
         document.getElementById('project-description').innerHTML = project.description;
         projectModal.style.display = 'flex';
+      } else {
+        console.log('Project not found for ID:', projectId); // Debug
       }
     });
   });
