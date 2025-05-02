@@ -64,6 +64,15 @@ window.addEventListener('click', (e) => {
   if (e.target === projectModal) {
     projectModal.style.display = 'none';
   }
+  if (e.target === priceListModal) {
+    priceListModal.style.display = 'none';
+  }
+  if (e.target === privacyPolicyModal) {
+    privacyPolicyModal.style.display = 'none';
+  }
+  if (e.target === termsServiceModal) {
+    termsServiceModal.style.display = 'none';
+  }
 });
 
 // Project Modal Close
@@ -135,5 +144,57 @@ document.querySelectorAll('.mosaic-grid').forEach(grid => {
     if (e.target === priceListModal) {
       priceListModal.style.display = 'none';
     }
+  });
+
+  // Footer Email Modal Trigger
+  const footerOpenEmailForm = document.getElementById('footer-open-email-form');
+
+  footerOpenEmailForm.addEventListener('click', (e) => {
+    e.preventDefault();
+    emailModal.style.display = 'flex';
+  });
+
+  // In-Modal Contact Links
+  const privacyToEmail = document.getElementById('privacy-to-email');
+  const termsToEmail = document.getElementById('terms-to-email');
+
+  privacyToEmail.addEventListener('click', (e) => {
+    e.preventDefault();
+    privacyPolicyModal.style.display = 'none';
+    emailModal.style.display = 'flex';
+  });
+
+  termsToEmail.addEventListener('click', (e) => {
+    e.preventDefault();
+    termsServiceModal.style.display = 'none';
+    emailModal.style.display = 'flex';
+  });
+
+  // Terms of Service Modal
+  const openTermsService = document.getElementById('open-terms-service');
+  const termsServiceModal = document.getElementById('terms-service-modal');
+  const closeTermsService = termsServiceModal.querySelector('.close');
+
+  openTermsService.addEventListener('click', (e) => {
+    e.preventDefault();
+    termsServiceModal.style.display = 'flex';
+  });
+
+  closeTermsService.addEventListener('click', () => {
+    termsServiceModal.style.display = 'none';
+  });
+
+  // Privacy Policy Modal
+  const openPrivacyPolicy = document.getElementById('open-privacy-policy');
+  const privacyPolicyModal = document.getElementById('privacy-policy-modal');
+  const closePrivacyPolicy = privacyPolicyModal.querySelector('.close');
+
+  openPrivacyPolicy.addEventListener('click', (e) => {
+    e.preventDefault();
+    privacyPolicyModal.style.display = 'flex';
+  });
+
+  closePrivacyPolicy.addEventListener('click', () => {
+    privacyPolicyModal.style.display = 'none';
   });
 });
