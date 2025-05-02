@@ -20,10 +20,15 @@
   <!-- Navbar -->
   <nav>
     <div class="navbar">
-      <a href="https://linktr.ee/dmitriykim" class="site-name">Dmitriy Kim</a>
+      <div class="navbar-left">
+        <a href="https://linktr.ee/dmitriykim" class="site-name">Dmitriy Kim</a>
+        <a href="#" id="open-price-list" class="price-list">Price List</a>
+      </div>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/kimdmitriy" target="_blank" aria-label="LinkedIn"><i
             class="fab fa-linkedin-in"></i></a>
+        <a href="https://calendar.app.google/x8APxmCxmZnGwwAQ8" target="_blank" aria-label="Book a Meeting"><i
+            class="fas fa-calendar-alt"></i></a>
         <a href="#" id="open-email-form" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
       <div class="search-container">
@@ -31,6 +36,25 @@
       </div>
     </div>
   </nav>
+
+  <!-- Price List Modal -->
+  <div id="price-list-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Price List</h2>
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Consulting</td>
+          <td>$150/hour</td>
+        </tr>
+        <!-- Add other services -->
+      </table>
+    </div>
+  </div>
 
   <!-- Email Form Modal -->
   <div id="email-modal" class="modal">
@@ -65,7 +89,7 @@
     <!-- Consulting -->
     <div class="service-plate" id="consulting">
       <h2>Consulting</h2>
-      <div class="mosaic-grid" id="consulting1" data-columns="5">
+      <div class="mosaic-grid" id="consulting-grid" data-columns="5">
         <div class="mosaic-tile" data-project-id="consulting-1">
           <img src="pics/Consulting1.png" alt="Construction company consulting">
           <div class="caption">Project 1: Window Construction Company</div>
@@ -76,18 +100,14 @@
     <!-- Writing -->
     <div class="service-plate" id="writing">
       <h2>Writing</h2>
-      <div class="mosaic-grid" id="writing1">
+      <div class="mosaic-grid" id="writing-grid">
         <div class="mosaic-tile" data-project-id="writing-1">
           <img src="pics/Writing1.png" alt="Resultism Guide v1.0">
           <div class="caption">Resultism Guide v1.0</div>
         </div>
         <div class="mosaic-tile" data-project-id="writing-2">
-          <img src="https://via.placeholder.com/400x300" alt="Blog Content">
-          <div class="caption">Project 2: Blog Content</div>
-        </div>
-        <div class="mosaic-tile" data-project-id="writing-3">
-          <img src="https://via.placeholder.com/600x450" alt="Copywriting">
-          <div class="caption">Project 3: Copywriting</div>
+          <img src="https://via.placeholder.com/800x600" alt="TBA">
+          <div class="caption">TBA</div>
         </div>
       </div>
     </div>
@@ -95,18 +115,14 @@
     <!-- Projects -->
     <div class="service-plate" id="projects">
       <h2>Projects</h2>
-      <div class="mosaic-grid" id="projects1">
+      <div class="mosaic-grid" id="projects-grid">
         <div class="mosaic-tile" data-project-id="projects-1">
-          <img src="pics/project1.jpg" alt="Agile Implementation">
-          <div class="caption">Project 1: Agile Implementation</div>
+          <img src="pics/Loewe Hyundai Seoul.jpg" alt="Loewe Hyundai Seoul">
+          <div class="caption">IT Projects</div>
         </div>
         <div class="mosaic-tile" data-project-id="projects-2">
-          <img src="pics/project2.jpg" alt="Team Coordination">
-          <div class="caption">Project 2: Team Coordination</div>
-        </div>
-        <div class="mosaic-tile" data-project-id="projects-3">
-          <img src="pics/project3.jpg" alt="Risk Management">
-          <div class="caption">Project 3: Risk Management</div>
+          <img src="pics/Suits.jpg" alt="Suits">
+          <div class="caption">OTT Content Localization Projects</div>
         </div>
       </div>
     </div>
@@ -114,7 +130,7 @@
     <!-- Mentoring -->
     <div class="service-plate" id="mentoring">
       <h2>Mentoring</h2>
-      <div class="mosaic-grid" id="mentoring1">
+      <div class="mosaic-grid" id="mentoring-grid">
         <div class="mosaic-tile" data-project-id="mentoring-1">
           <img src="https://via.placeholder.com/800x600" alt="Career Coaching">
           <div class="caption">Project 1: Career Coaching</div>
@@ -133,7 +149,7 @@
     <!-- Music -->
     <div class="service-plate" id="music">
       <h2>Music</h2>
-      <div class="mosaic-grid" id="music1">
+      <div class="mosaic-grid" id="music-grid">
         <div class="mosaic-tile" data-project-id="music-1">
           <img src="https://via.placeholder.com/800x600" alt="Music Production">
           <div class="caption">Project 1: Music Production</div>
@@ -152,7 +168,7 @@
     <!-- Video -->
     <div class="service-plate" id="video">
       <h2>Video</h2>
-      <div class="mosaic-grid" id="video1">
+      <div class="mosaic-grid" id="video-grid">
         <div class="mosaic-tile" data-project-id="video-1">
           <img src="https://via.placeholder.com/800x600" alt="Video Production">
           <div class="caption">Project 1: Video Production</div>
