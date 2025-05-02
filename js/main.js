@@ -28,7 +28,7 @@ function initializeTiles() {
         document.getElementById('project-image').src = project.image;
         document.getElementById('project-image').alt = project.title;
         document.getElementById('project-caption').textContent = project.caption;
-        document.getElementById('project-description').innerHTML = project.description;
+        document.getElementById('project-description').textContent = project.description;
         projectModal.style.display = 'flex';
       }
     });
