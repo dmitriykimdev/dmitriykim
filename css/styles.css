@@ -86,11 +86,58 @@ body {
 
 .modal-content {
     background: #FFFFFF;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
+    max-height: 70vh; /* Reduced from 80vh to fit better */
+    overflow-y: auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    position: relative;
+}
+
+/* Specific styles for Privacy Policy and Terms of Service modals */
+#privacy-policy-modal .modal-content,
+#terms-service-modal .modal-content {
+    max-height: 60vh; /* Further constrain legal modals */
+}
+
+.modal-scrollable {
+    max-height: calc(60vh - 70px); /* Account for header, close button, and padding */
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.modal-scrollable h3 {
+    font-size: 1.2rem;
+    margin: 0.75rem 0 0.5rem;
+    color: #2D2D2D;
+}
+
+.modal-scrollable p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #2D2D2D;
+    margin: 0.5rem 0;
+}
+
+.modal-scrollable ul {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.modal-scrollable li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.modal-scrollable a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.modal-scrollable a:hover {
+    text-decoration: underline;
 }
 
 .project-modal-content {
@@ -158,8 +205,8 @@ body {
 .modal-content .close,
 .project-modal-content .close {
     position: sticky;
-    top: 1rem;
-    right: 1.5rem;
+    top: 0.5rem;
+    right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: #6B7280;
@@ -254,7 +301,7 @@ body {
 }
 
 .service-plate:hover h2 {
-    opacity: 0.3;
+    opacity: 0;
 }
 
 .mosaic-grid {
@@ -309,151 +356,8 @@ body {
     filter: brightness(40%) grayscale(20%);
 }
 
-@media (max-width: 600px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .social-links,
-    .search-container {
-        margin-top: 1rem;
-    }
-
-    #search-input {
-        width: 100%;
-    }
-
-    .project-modal-content {
-        width: 95%;
-        padding: 1.5rem;
-    }
-}
-
-/* ID-Specific Customizations */
-#consulting .mosaic-grid {
-    background: #E6F0FA;
-}
-
-#consulting .mosaic-tile {
-    border: 2px solid #007BFF;
-    transition: transform 0.3s ease;
-}
-
-#consulting .mosaic-tile:hover {
-    transform: scale(1.05);
-}
-
-#consulting .mosaic-tile .caption {
-    background: rgba(0, 123, 255, 0.7);
-}
-
-#writing .mosaic-grid {
-    background: #F3E8F7;
-}
-
-#writing .mosaic-tile {
-    border: 2px solid #7e46ac;
-    transition: transform 0.3s ease;
-}
-
-#writing .mosaic-tile:hover {
-    transform: scale(1.05);
-}
-
-#writing .mosaic-tile .caption {
-    background: rgba(136, 50, 158, 0.7);
-}
-
-#projects .mosaic-grid {
-    background: #E6F3E6;
-}
-
-#projects .mosaic-tile {
-    border: 2px solid #28A745;
-    transition: transform 0.3s ease;
-}
-
-#projects .mosaic-tile:hover {
-    transform: scale(1.05);
-}
-
-#projects .mosaic-tile .caption {
-    background: rgba(50, 158, 82, 0.7);
-}
-
-#mentoring .mosaic-grid {
-    background: #FFF4E6;
-}
-
-#mentoring .mosaic-tile {
-    border: 2px solid #FD7E14;
-    transition: transform 0.3s ease;
-}
-
-#mentoring .mosaic-tile .caption {
-    background: rgba(253, 126, 20, 0.7);
-}
-
-#mentoring .mosaic-tile:hover {
-    transform: scale(1.05);
-}
-
-#music .mosaic-grid {
-    background: #FCE4EC;
-}
-
-#music .mosaic-tile {
-    border: 2px solid #DC3545;
-    transition: transform 0.3s ease;
-}
-
-#music .mosaic-tile:hover {
-    transform: scale(1.05);
-}
-
-#music .mosaic-tile .caption {
-    background: rgba(161, 49, 92, 0.7);
-}
-
-#video .mosaic-grid {
-    background: #F0E6FA;
-}
-
-#video .mosaic-tile {
-    border: 2px solid #6610F2;
-    transition: transform 0.3s ease;
-}
-
-#video .mosaic-tile .caption {
-    background: rgba(102, 16, 242, 0.7);
-}
-
-#video .mosaic-tile:hover {
-    transform: scale(1.05);
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Footer Styles */
 .footer {
     background: #000000;
-    /* Matches navbar */
     color: #FFFFFF;
     padding: 2rem 0;
     margin-top: 2rem;
@@ -511,7 +415,6 @@ body {
 
 .footer-contact a:hover {
     color: #007BFF;
-    /* Matches navbar hover */
 }
 
 .footer-testimonial blockquote {
@@ -578,7 +481,7 @@ body {
         align-items: flex-start;
         padding: 1rem;
     }
-
+    
     .social-links,
     .search-container {
         margin-top: 1rem;
@@ -605,5 +508,111 @@ body {
 
     .footer-testimonial .client-logo {
         margin: 0.5rem auto;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 1rem;
+        max-height: 80vh; /* Slightly taller on mobile for usability */
+    }
+
+    #privacy-policy-modal .modal-content,
+    #terms-service-modal .modal-content {
+        max-height: 70vh; /* Adjusted for mobile */
+    }
+
+    .modal-scrollable {
+        max-height: calc(70vh - 60px); /* Adjusted for mobile header */
+        font-size: 0.9rem;
+    }
+
+    .modal-scrollable h3 {
+        font-size: 1.1rem;
+    }
+}
+
+#consulting .mosaic-grid {
+    background: #E6F0FA;
+}
+
+#consulting .mosaic-tile {
+    border: 2px solid #007BFF;
+}
+
+#consulting .mosaic-tile .caption {
+    background: rgba(0, 123, 255, 0.7);
+}
+
+#writing .mosaic-grid {
+    background: #F3E8F7;
+}
+
+#writing .mosaic-tile {
+    border: 2px solid #6B7280;
+}
+
+#writing .mosaic-tile .caption {
+    background: rgba(107, 114, 128, 0.7);
+}
+
+#projects .mosaic-grid {
+    background: #E6F3E6;
+}
+
+#projects .mosaic-tile {
+    border: 2px solid #28A745;
+    transition: transform 0.3s ease;
+}
+
+#projects .mosaic-tile:hover {
+    transform: scale(1.05);
+}
+
+#mentoring .mosaic-grid {
+    background: #FFF4E6;
+}
+
+#mentoring .mosaic-tile {
+    border: 2px solid #FD7E14;
+}
+
+#mentoring .mosaic-tile .caption {
+    background: rgba(253, 126, 20, 0.7);
+}
+
+#music .mosaic-grid {
+    background: #FCE4EC;
+}
+
+#music .mosaic-tile {
+    border: 2px solid #DC3545;
+    transition: box-shadow 0.3s ease;
+}
+
+#music .mosaic-tile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#video .mosaic-grid {
+    background: #F0E6FA;
+}
+
+#video .mosaic-tile {
+    border: 2px solid #6610F2;
+}
+
+#video .mosaic-tile .caption {
+    background: rgba(102, 16, 242, 0.7);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
