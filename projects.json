@@ -18,10 +18,10 @@
     {
         "projectId": "writing-2",
         "serviceId": "writing",
-        "title": "Blog Content",
+        "title": "Writing 2",
         "image": "https://via.placeholder.com/400x300",
-        "caption": "Project 2: Blog Content",
-        "description": "Wrote a series of SEO-optimized blog posts for a tech company, driving 10,000 monthly visitors."
+        "caption": "TBA",
+        "description": "Lorem Ipsum"
     },
     {
         "projectId": "writing-3",
@@ -34,10 +34,10 @@
     {
         "projectId": "projects-1",
         "serviceId": "projects",
-        "title": "Agile Implementation",
-        "image": "pics/project1.jpg",
-        "caption": "Project 1: Agile Implementation",
-        "description": "Led Agile transformation for a software development team, reducing delivery time by 40%."
+        "title": "IT & Network Projects",
+        "image": "pics/Celine Lotte Main.jpg",
+        "caption": "Store Infrastructure & IT Projects",
+        "description": "<h1><span style=\"font-weight: 400;\">Installed IT and network systems</span></h1><h2><span style=\"font-weight: 400;\">Responsibilities</span></h2><ol><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Analyzed equipment and project requirements</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Prepared IT Profile and budget lists</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Ordered the equipment</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Collaborated with IT vendor to configure the equipment</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Oversaw the installation process and removed process blockers</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Communicated with multiple stakeholders</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Finalized the project, created and shared documentation</span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Handled expense reports and finance-related matters</span></li></ol><h1><span style=\"font-weight: 400;\">Projects</span></h1><ol><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\"><a href=\"https://stores.celine.com/en_pt/seoul/81-namdaemun-ro-jung-gu-0001426\">Celine Lotte Main</a></span></li><p><img src=\"pics/Celine Lotte Main.jpg\" alt=\"Celine Lotte Main\" style=\"max-width: 100%; height: auto;\"></p><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\"><a href=\"https://stores.celine.com/en_kr/seoul/63-sogong-ro-jung-gu\">Celine Shinsegae Main</a></span></li><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\"><a href=\"https://www.ehyundai.com/DP/lang/en/DEP000002.do?branchCd=B00140000\">Loewe Hyundai Seoul</a></span></li><p><img src=\"pics/Loewe Hyundai Seoul.jpg\" alt=\"Loewe Hyundai Seoul\" style=\"max-width: 100%; height: auto;\"></p><li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\"><a href=\"https://stores.celine.com/en_kr/busan/35-centumnamdae-ro-haeundae-gu\">Celine Shinsegae Centum</a></span></li><p><img src=\"pics/Celine Centum.jpg\" alt=\"Celine Centum\" style=\"max-width: 100%; height: auto;\"></p></ol>"
     },
     {
         "projectId": "projects-2",
