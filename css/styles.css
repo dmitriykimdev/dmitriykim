@@ -15,6 +15,11 @@ body {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
 .navbar a {
     color: #FFFFFF;
     text-decoration: none;
@@ -35,6 +40,11 @@ body {
 .site-name {
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.price-list {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .search-container {
@@ -244,7 +254,7 @@ body {
 }
 
 .service-plate:hover h2 {
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .mosaic-grid {
@@ -332,6 +342,11 @@ body {
 
 #consulting .mosaic-tile {
     border: 2px solid #007BFF;
+    transition: transform 0.3s ease;
+}
+
+#consulting .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 #consulting .mosaic-tile .caption {
@@ -343,11 +358,16 @@ body {
 }
 
 #writing .mosaic-tile {
-    border: 2px solid #6B7280;
+    border: 2px solid #7e46ac;
+    transition: transform 0.3s ease;
+}
+
+#writing .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 #writing .mosaic-tile .caption {
-    background: rgba(107, 114, 128, 0.7);
+    background: rgba(136, 50, 158, 0.7);
 }
 
 #projects .mosaic-grid {
@@ -363,16 +383,25 @@ body {
     transform: scale(1.05);
 }
 
+#projects .mosaic-tile .caption {
+    background: rgba(50, 158, 82, 0.7);
+}
+
 #mentoring .mosaic-grid {
     background: #FFF4E6;
 }
 
 #mentoring .mosaic-tile {
     border: 2px solid #FD7E14;
+    transition: transform 0.3s ease;
 }
 
 #mentoring .mosaic-tile .caption {
     background: rgba(253, 126, 20, 0.7);
+}
+
+#mentoring .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 #music .mosaic-grid {
@@ -381,11 +410,15 @@ body {
 
 #music .mosaic-tile {
     border: 2px solid #DC3545;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #music .mosaic-tile:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+#music .mosaic-tile .caption {
+    background: rgba(161, 49, 92, 0.7);
 }
 
 #video .mosaic-grid {
@@ -394,10 +427,15 @@ body {
 
 #video .mosaic-tile {
     border: 2px solid #6610F2;
+    transition: transform 0.3s ease;
 }
 
 #video .mosaic-tile .caption {
     background: rgba(102, 16, 242, 0.7);
+}
+
+#video .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 @keyframes slideIn {
