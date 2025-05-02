@@ -327,7 +327,7 @@ body {
 }
 
 #writing .mosaic-tile {
-    border: 2px dashed #6B7280;
+    border: 2px solid #6B7280;
 }
 
 #writing .mosaic-tile .caption {
@@ -352,7 +352,7 @@ body {
 }
 
 #mentoring .mosaic-tile {
-    border: 2px dotted #FD7E14;
+    border: 2px solid #FD7E14;
 }
 
 #mentoring .mosaic-tile .caption {
