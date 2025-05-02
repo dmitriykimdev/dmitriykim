@@ -72,12 +72,12 @@ closeProjectModal.addEventListener('click', () => {
 });
 
 // Search Functionality
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
   const term = this.value.trim().toLowerCase();
 
   servicePlates.forEach(plate => {
     const captions = plate.querySelectorAll('.caption');
-    const matchesPlate = Array.from(captions).some(caption => 
+    const matchesPlate = Array.from(captions).some(caption =>
       caption.textContent.toLowerCase().includes(term)
     );
 
@@ -115,5 +115,25 @@ document.querySelectorAll('.mosaic-grid').forEach(grid => {
     const maxRowSpan = Math.min(size.rowSpan, 3);
     tile.style.gridColumn = `span ${maxColSpan}`;
     tile.style.gridRow = `span ${maxRowSpan}`;
+  });
+
+  // Prices Modal
+  const openPriceListModal = document.getElementById('open-price-list');
+  const priceListModal = document.getElementById('price-list-modal');
+  const closePriceListModal = priceListModal.querySelector('.close');
+
+  openPriceListModal.addEventListener('click', (e) => {
+    e.preventDefault();
+    priceListModal.style.display = 'flex';
+  });
+
+  closePriceListModal.addEventListener('click', () => {
+    priceListModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === priceListModal) {
+      priceListModal.style.display = 'none';
+    }
   });
 });
