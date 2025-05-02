@@ -89,7 +89,8 @@ body {
     padding: 1.5rem;
     width: 80%;
     max-width: 600px;
-    max-height: 70vh; /* Reduced from 80vh to fit better */
+    max-height: 70vh;
+    /* Reduced from 80vh to fit better */
     overflow-y: auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -99,11 +100,13 @@ body {
 /* Specific styles for Privacy Policy and Terms of Service modals */
 #privacy-policy-modal .modal-content,
 #terms-service-modal .modal-content {
-    max-height: 60vh; /* Further constrain legal modals */
+    max-height: 60vh;
+    /* Further constrain legal modals */
 }
 
 .modal-scrollable {
-    max-height: calc(60vh - 70px); /* Account for header, close button, and padding */
+    max-height: calc(60vh - 70px);
+    /* Account for header, close button, and padding */
     overflow-y: auto;
     padding-right: 0.5rem;
 }
@@ -481,7 +484,7 @@ body {
         align-items: flex-start;
         padding: 1rem;
     }
-    
+
     .social-links,
     .search-container {
         margin-top: 1rem;
@@ -513,16 +516,19 @@ body {
     .modal-content {
         width: 90%;
         padding: 1rem;
-        max-height: 80vh; /* Slightly taller on mobile for usability */
+        max-height: 80vh;
+        /* Slightly taller on mobile for usability */
     }
 
     #privacy-policy-modal .modal-content,
     #terms-service-modal .modal-content {
-        max-height: 70vh; /* Adjusted for mobile */
+        max-height: 70vh;
+        /* Adjusted for mobile */
     }
 
     .modal-scrollable {
-        max-height: calc(70vh - 60px); /* Adjusted for mobile header */
+        max-height: calc(70vh - 60px);
+        /* Adjusted for mobile header */
         font-size: 0.9rem;
     }
 
@@ -531,12 +537,18 @@ body {
     }
 }
 
+/* ID-Specific Customizations */
 #consulting .mosaic-grid {
     background: #E6F0FA;
 }
 
 #consulting .mosaic-tile {
     border: 2px solid #007BFF;
+    transition: transform 0.3s ease;
+}
+
+#consulting .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 #consulting .mosaic-tile .caption {
@@ -548,11 +560,16 @@ body {
 }
 
 #writing .mosaic-tile {
-    border: 2px solid #6B7280;
+    border: 2px solid #7e46ac;
+    transition: transform 0.3s ease;
+}
+
+#writing .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 #writing .mosaic-tile .caption {
-    background: rgba(107, 114, 128, 0.7);
+    background: rgba(136, 50, 158, 0.7);
 }
 
 #projects .mosaic-grid {
@@ -568,16 +585,25 @@ body {
     transform: scale(1.05);
 }
 
+#projects .mosaic-tile .caption {
+    background: rgba(50, 158, 82, 0.7);
+}
+
 #mentoring .mosaic-grid {
     background: #FFF4E6;
 }
 
 #mentoring .mosaic-tile {
     border: 2px solid #FD7E14;
+    transition: transform 0.3s ease;
 }
 
 #mentoring .mosaic-tile .caption {
     background: rgba(253, 126, 20, 0.7);
+}
+
+#mentoring .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 #music .mosaic-grid {
@@ -586,11 +612,15 @@ body {
 
 #music .mosaic-tile {
     border: 2px solid #DC3545;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #music .mosaic-tile:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+#music .mosaic-tile .caption {
+    background: rgba(161, 49, 92, 0.7);
 }
 
 #video .mosaic-grid {
@@ -599,10 +629,15 @@ body {
 
 #video .mosaic-tile {
     border: 2px solid #6610F2;
+    transition: transform 0.3s ease;
 }
 
 #video .mosaic-tile .caption {
     background: rgba(102, 16, 242, 0.7);
+}
+
+#video .mosaic-tile:hover {
+    transform: scale(1.05);
 }
 
 @keyframes slideIn {
