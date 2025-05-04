@@ -304,7 +304,7 @@ body {
 }
 
 .service-plate:hover h2 {
-    opacity: 0;
+    opacity: 0.3;
 }
 
 .mosaic-grid {
