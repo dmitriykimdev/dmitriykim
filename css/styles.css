@@ -203,6 +203,7 @@ body {
 }
 
 .project-modal-content {
+    position: relative; /* Explicitly set to establish positioning context */
     background: #FFFFFF;
     padding: 2rem;
     width: 90%;
@@ -275,6 +276,7 @@ body {
     color: #333;
     cursor: pointer;
     transition: color 0.3s ease;
+    z-index: 1010;
 }
 
 .modal-content .close:hover,
