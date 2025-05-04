@@ -82,19 +82,19 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow: auto;
 }
 
 .modal-content {
-    background: #FFFFFF;
-    padding: 1.5rem;
-    width: 80%;
-    max-width: 600px;
-    max-height: 70vh;
-    /* Reduced from 80vh to fit better */
-    overflow-y: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 5% auto; /* Center vertically and horizontally */
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px; /* Limit width for larger screens */
     position: relative;
+    font-family: 'Roboto', sans-serif; /* Modern font */
 }
 
 /* Specific styles for Privacy Policy and Terms of Service modals */
@@ -102,6 +102,65 @@ body {
 #terms-service-modal .modal-content {
     max-height: 60vh;
     /* Further constrain legal modals */
+}
+
+.price-list table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.price-list th,
+.price-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.price-list th {
+    background-color: #3498db; /* Blue header background */
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.price-list tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for alternating rows */
+}
+
+.price-list tr:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    .price-list table {
+        font-size: 0.9rem;
+    }
+
+    .price-list th,
+    .price-list td {
+        padding: 8px 10px;
+    }
+
+    /* Make table scrollable on small screens */
+    .modal-content {
+        overflow-x: auto;
+    }
+}
+
+/* Ensure modal is centered on smaller screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
 }
 
 .modal-scrollable {
@@ -162,9 +221,10 @@ body {
 }
 
 .project-modal-content h2 {
-    font-size: 1.75rem;
-    margin: 0.75rem 0;
-    color: #2D2D2D;
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
 }
 
 .project-modal-content p {
@@ -207,20 +267,19 @@ body {
 
 .modal-content .close,
 .project-modal-content .close {
-    position: sticky;
-    top: 0.5rem;
-    right: 1rem;
-    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
     cursor: pointer;
-    color: #6B7280;
-    transition: color 0.2s ease;
-    background: #FFFFFF;
-    z-index: 10;
+    transition: color 0.3s ease;
 }
 
 .modal-content .close:hover,
 .project-modal-content .close:hover {
-    color: #2D2D2D;
+    color: #ff0000; /* Red on hover */
 }
 
 .modal-content form {
