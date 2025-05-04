@@ -213,6 +213,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     animation: slideIn 0.3s ease-out;
+    margin: 5% auto;
 }
 
 .project-modal-content h1 {
