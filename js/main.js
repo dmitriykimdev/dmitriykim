@@ -3,9 +3,6 @@ const openEmailModal = document.getElementById('open-email-form');
 const emailModal = document.getElementById('email-modal');
 const closeEmailModal = emailModal.querySelector('.close');
 const cancelButton = document.getElementById('cancel');
-const openPriceListModal = document.getElementById('open-price-list');
-const priceListModal = document.getElementById('price-list-modal');
-const closePriceListModal = priceListModal.querySelector('.close');
 const openPrivacyPolicy = document.getElementById('open-privacy-policy');
 const privacyPolicyModal = document.getElementById('privacy-policy-modal');
 const closePrivacyPolicy = privacyPolicyModal.querySelector('.close');
@@ -92,16 +89,6 @@ termsToEmail.addEventListener('click', (e) => {
   emailModal.style.display = 'block';
 });
 
-// Price List Modal
-openPriceListModal.addEventListener('click', (e) => {
-  e.preventDefault();
-  priceListModal.style.display = 'block';
-});
-
-closePriceListModal.addEventListener('click', () => {
-  priceListModal.style.display = 'none';
-});
-
 // Privacy Policy Modal
 openPrivacyPolicy.addEventListener('click', (e) => {
   e.preventDefault();
@@ -134,9 +121,6 @@ window.addEventListener('click', (e) => {
   }
   if (e.target === projectModal) {
     projectModal.style.display = 'none';
-  }
-  if (e.target === priceListModal) {
-    priceListModal.style.display = 'none';
   }
   if (e.target === privacyPolicyModal) {
     privacyPolicyModal.style.display = 'none';
