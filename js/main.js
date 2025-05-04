@@ -24,7 +24,7 @@ let projects = [];
 // Load Projects Data
 fetch('projects.json')
   .then(response => {
-    if (!response.ok) throw new Error('Failed to fetch projects.json');
+    if (!response.ok) throw new Error(`Failed to fetch projects.json: ${response.statusText}`);
     return response.json();
   })
   .then(data => {
@@ -32,13 +32,18 @@ fetch('projects.json')
     projects = data;
     initializeTiles();
   })
-  .catch(error => console.error('Error loading projects:', error));
+  .catch(error => {
+    console.error('Error loading projects:', error);
+    alert('Failed to load project data. Please try refreshing the page.');
+  });
 
 // Initialize Clickable Tiles
 function initializeTiles() {
-  document.querySelectorAll('.mosaic-tile').forEach(tile => {
+  const tiles = document.querySelectorAll('.mosaic-tile');
+  console.log('Found tiles:', tiles.length);
+  tiles.forEach(tile => {
+    const projectId = tile.dataset.projectId;
     tile.addEventListener('click', () => {
-      const projectId = tile.dataset.projectId;
       console.log('Tile clicked:', projectId);
       const project = projects.find(p => p.projectId === projectId);
       if (project) {
@@ -48,9 +53,9 @@ function initializeTiles() {
         document.getElementById('project-image').alt = project.title;
         document.getElementById('project-caption').textContent = project.caption;
         document.getElementById('project-description').innerHTML = project.description;
-        projectModal.style.display = 'flex';
+        projectModal.style.display = 'block'; // Changed from 'flex' to 'block'
       } else {
-        console.log('Project not found for ID:', projectId);
+        console.error('Project not found for ID:', projectId);
       }
     });
   });
@@ -59,7 +64,7 @@ function initializeTiles() {
 // Email Modal Functionality
 openEmailModal.addEventListener('click', (e) => {
   e.preventDefault();
-  emailModal.style.display = 'flex';
+  emailModal.style.display = 'block';
 });
 
 closeEmailModal.addEventListener('click', () => {
@@ -72,25 +77,25 @@ cancelButton.addEventListener('click', () => {
 
 footerOpenEmailForm.addEventListener('click', (e) => {
   e.preventDefault();
-  emailModal.style.display = 'flex';
+  emailModal.style.display = 'block';
 });
 
 privacyToEmail.addEventListener('click', (e) => {
   e.preventDefault();
   privacyPolicyModal.style.display = 'none';
-  emailModal.style.display = 'flex';
+  emailModal.style.display = 'block';
 });
 
 termsToEmail.addEventListener('click', (e) => {
   e.preventDefault();
   termsServiceModal.style.display = 'none';
-  emailModal.style.display = 'flex';
+  emailModal.style.display = 'block';
 });
 
 // Price List Modal
 openPriceListModal.addEventListener('click', (e) => {
   e.preventDefault();
-  priceListModal.style.display = 'flex';
+  priceListModal.style.display = 'block';
 });
 
 closePriceListModal.addEventListener('click', () => {
@@ -100,7 +105,7 @@ closePriceListModal.addEventListener('click', () => {
 // Privacy Policy Modal
 openPrivacyPolicy.addEventListener('click', (e) => {
   e.preventDefault();
-  privacyPolicyModal.style.display = 'flex';
+  privacyPolicyModal.style.display = 'block';
 });
 
 closePrivacyPolicy.addEventListener('click', () => {
@@ -110,7 +115,7 @@ closePrivacyPolicy.addEventListener('click', () => {
 // Terms of Service Modal
 openTermsService.addEventListener('click', (e) => {
   e.preventDefault();
-  termsServiceModal.style.display = 'flex';
+  termsServiceModal.style.display = 'block';
 });
 
 closeTermsService.addEventListener('click', () => {
